@@ -157,7 +157,7 @@ end
 
 ---@param renderer Pointer
 function TextReadOnly:draw(renderer)
-	local position = SDL.FPoint.new(self.rect.x-self.offsetX, self.rect.y-self.offsetY)
+	local position = SDL.FPoint.new(self.offsetX == nil and self.rect.x or self.rect.x-self.offsetX, self.offsetY == nil and self.rect.y or self.rect.y-self.offsetY)
 
 	SDL.Render.setRenderClipRect(renderer, SDL.fRectToRect(self.rect))
 
