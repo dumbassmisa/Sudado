@@ -1,2 +1,2 @@
 # Sudado
-Sudado is an user interface library for [LuccaEngine](https://github.com/SuadoCowboy/LuccaEngine)
+Sudado is an user interface library for [SomniEngine](https://github.com/SomniPop/SomniEngine)
