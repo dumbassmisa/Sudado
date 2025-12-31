@@ -120,8 +120,8 @@ function TextReadOnly:onMouseButtonDown(button, mousePosition)
 	if button == SDL.Mouse.Button.LEFT then
 		self.readOnlyText:onMouseButtonDown(
 			self.text,
-			self.rect.x-self.offsetX,
-			self.rect.y-self.offsetY,
+			self.offsetX == nil and self.rect.x or self.rect.x-self.offsetX,
+			self.offsetY == nil and self.rect.y or self.rect.y-self.offsetY,
 			mousePosition,
 			self.font,
 			self.fontHeight,
@@ -140,8 +140,8 @@ function TextReadOnly:onMouseMotion(mousePosition)
 	if SDL.Mouse.isButtonDown(SDL.Mouse.Button.LEFT) then
 		self.readOnlyText:onMouseMotion(
 			self.text,
-			self.rect.x-self.offsetX,
-			self.rect.y-self.offsetY,
+			self.offsetX == nil and self.rect.x or self.rect.x-self.offsetX,
+			self.offsetY == nil and self.rect.y or self.rect.y-self.offsetY,
 			mousePosition,
 			self.font,
 			self.fontHeight,
