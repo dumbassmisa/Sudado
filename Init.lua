@@ -158,7 +158,7 @@ Sudado.HorizontalScrollBar = require('Sudado.Element.HorizontalScrollBar')
 ---@param ratio SDL.Point
 function Sudado.defaultOnWindowResize(element, ratio)
 	if element.layout == nil then
-		jePrint(PrintLevel.ERROR, 'Element with no layout is trying to call default onWindowResize event\n')
+		sePrint(PrintLevel.ERROR, 'Element with no layout is trying to call default onWindowResize event\n')
 		return
 	end
 
@@ -189,7 +189,7 @@ end
 
 function Sudado.defaultOnResize(element)
 	if element.layout == nil then
-		jePrint(PrintLevel.ERROR, 'Element with no layout is trying to call default onResize event\n')
+		sePrint(PrintLevel.ERROR, 'Element with no layout is trying to call default onResize event\n')
 		return
 	end
 
@@ -203,7 +203,7 @@ end
 
 function Sudado.defaultOnMove(element)
 	if element.layout == nil then
-		jePrint(PrintLevel.WARNING, 'Element with no layout using default onMove event\n')
+		sePrint(PrintLevel.WARNING, 'Element with no layout using default onMove event\n')
 		return
 	end
 
@@ -254,14 +254,14 @@ function Sudado.setParent(instance, parent)
 			if instance.onResize then
 				instance:onResize()
 			else
-				jePrint(PrintLevel.WARNING, 'No onResize event found for neither root parent, parent or instance when setting parent\n')
+				sePrint(PrintLevel.WARNING, 'No onResize event found for neither root parent, parent or instance when setting parent\n')
 				return
 			end
 
 			if instance.onMove then
 				instance:onMove()
 			else
-				jePrint(PrintLevel.WARNING, 'No onMove event found for neither root parent, parent or instance when setting parent\n')
+				sePrint(PrintLevel.WARNING, 'No onMove event found for neither root parent, parent or instance when setting parent\n')
 				return
 			end
 		end
@@ -296,7 +296,7 @@ function Sudado.setParent(instance, parent)
 		elseif instance.onResize then
 			instance:onResize()
 		else
-			jePrint(PrintLevel.WARNING, 'No onResize event found for neither root parent, parent or instance when setting parent\n')
+			sePrint(PrintLevel.WARNING, 'No onResize event found for neither root parent, parent or instance when setting parent\n')
 			return
 		end
 		if rootParent.onMove then
@@ -306,7 +306,7 @@ function Sudado.setParent(instance, parent)
 		elseif instance.onMove then
 			instance:onMove()
 		else
-			jePrint(PrintLevel.WARNING, 'No onMove event found for neither root parent, parent or instance when setting parent\n')
+			sePrint(PrintLevel.WARNING, 'No onMove event found for neither root parent, parent or instance when setting parent\n')
 			return
 		end
 	end

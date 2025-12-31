@@ -6,7 +6,7 @@ local function setMouseCursor(type)
 
 	Sudado.currentCursor = SDL.Mouse.createSystemCursor(type)
 	if Sudado.currentCursor == nil then
-		jePrint(PrintLevel.ERROR, "Could not create system cursor: ", SDL.getError())
+		sePrint(PrintLevel.ERROR, "Could not create system cursor: ", SDL.getError())
 		return
 	end
 
