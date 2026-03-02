@@ -1,0 +1,7 @@
+- Make it as a C# Plugin
+- Remake TextReadOnly following updated RichTextBox
+- Temporary wrapped text functionality for TextReadoOnly and RichTextBox
+- Create a copy of elements but only the visible ones so that draw function is faster instead of having to call Sudado.isVisible everytime
+- Make RichText use text again, since beginIndex is too bad for pop/erase functions
+- BUG: not wrapping text correctly!
+- BUG: wrapped text causes selection to be stuck in some loop
